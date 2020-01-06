@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sudoku &#8212; Sudoku  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Print" href="print1.html" />
+    <link rel="prev" title="Player" href="player.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="sudoku">
+<h1>Sudoku<a class="headerlink" href="#sudoku" title="Permalink to this headline">¶</a></h1>
+<p>This class is meant to represent one sudoku game</p>
+<div class="section" id="functionality">
+<h2>Functionality<a class="headerlink" href="#functionality" title="Permalink to this headline">¶</a></h2>
+<p>Functionality of the sudoku class is following:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>sudoku can be loaded from file if the logged in player have saved one</p></li>
+<li><p>sudoku can be saved into file and it can be resumed later</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<p>Sudoku contains 3 important variables :</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>sudoku - sudoku template into which can player add his solution</p></li>
+<li><p>sudoku_solution - it is solved sudoku on which players solution is compared</p></li>
+<li><p>sudoku_template - inside this array there is original sudoku template so the user can not change the original numbers that were given</p></li>
+</ul>
+</div></blockquote>
+<p>All of the variables are private so the player should not be able to access them.</p>
+<p>Sudoku also have possibility of changing difficulty of the game which affects number of empty fields inside of the sudoku template.</p>
+<p>You can add a number into sudoku variable using function add which check your input and if it is correct then it will insert your input into sudoku variable and return true else it returns false.</p>
+<p>You can also print the sudoku variable using print function where you have to pass an message which will be printed after the sudoku is printed.</p>
+</div>
+<div class="section" id="saving-process">
+<h2>Saving process<a class="headerlink" href="#saving-process" title="Permalink to this headline">¶</a></h2>
+<p>When player decides to save his game he can simply call method save which will save his actual gae into file which name will be &lt;players username&gt;.txt</p>
+<p>All 3 important variables will be saved but only sudoku variable will be saved in normal form the rest two will be saved in changed order
+so no one should be possible to read the solution from the saved file.
+After file is successfully saved the save function will return true and player can either logout or continue playing.</p>
+<p>As i mentioned before there is an possibility of saving and loading game but there is also a possibility of removing saved game if the player wish so.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Sudoku</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="game.html">Game</a></li>
+<li class="toctree-l1"><a class="reference internal" href="player.html">Player</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sudoku</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functionality">Functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#variables">Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#saving-process">Saving process</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="print1.html">Print</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="player.html" title="previous chapter">Player</a></li>
+      <li>Next: <a href="print1.html" title="next chapter">Print</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Daniel Trizna.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/sudoku.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

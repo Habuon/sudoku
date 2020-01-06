@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Player &#8212; Sudoku  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Sudoku" href="sudoku.html" />
+    <link rel="prev" title="Game" href="game.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="player">
+<h1>Player<a class="headerlink" href="#player" title="Permalink to this headline">¶</a></h1>
+<p>This class is meant to represent one player</p>
+<div class="section" id="functionality">
+<h2>Functionality<a class="headerlink" href="#functionality" title="Permalink to this headline">¶</a></h2>
+<p>Functionality of the player class is following:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>player can log in or sign in if he does not have an acount</p></li>
+<li><p>player can log out if he finished game or if he does not need to be logged in anymore for whatever reason</p></li>
+<li><p>player can save his actual game under his username and load it later</p></li>
+</ul>
+</div></blockquote>
+<p>You can simply get information whether player is logged in or not by calling a logged_in function and the you can also get username of logged player.</p>
+<p>If you know users username and password you can also remove specific user by calling function remove_user and providing correct credentials.</p>
+</div>
+<div class="section" id="sign-in-process">
+<h2>Sign in process<a class="headerlink" href="#sign-in-process" title="Permalink to this headline">¶</a></h2>
+<p>When player chooses to sign in he is prompted to provide his username and after that his password. When the username provided by user already exists
+user is told so and asked for another username.</p>
+<p>When player provides valid username and password these are saved into file users.txt. Before the password is saved it is hashed with specific
+algorithm so only a program can decode it.</p>
+<p>After successful sing in the player is forwarded to the next step in game and he is also automatically logged in with his new account.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Sudoku</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="game.html">Game</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Player</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#functionality">Functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sign-in-process">Sign in process</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sudoku.html">Sudoku</a></li>
+<li class="toctree-l1"><a class="reference internal" href="print1.html">Print</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="game.html" title="previous chapter">Game</a></li>
+      <li>Next: <a href="sudoku.html" title="next chapter">Sudoku</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Daniel Trizna.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/player.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
